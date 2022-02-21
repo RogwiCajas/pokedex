@@ -1,9 +1,9 @@
-<div class="card-p" *ngIf="nombre!= ' ' && nombre!=undefined ">
+<div class="card-p">
     <div class="avatar">
     </div>
     <div class="container">
-        <img class= "image" src = {{imagen}}/>
-        <h4 class="title-pokemon">#{{pokemon.id}}  {{nombre}}</h4>
+        <img class= "image" src = {{pokemon.sprites.other.home.front_default}}/>
+        <h4 class="title-pokemon">#{{pokemon.id}}  {{pokemon.name}}</h4>
         <div class="types-section">
             <div class="type" *ngFor="let type of pokemon.types; let i = index">
                 {{type.type.name}}   
@@ -13,7 +13,7 @@
             <div class="clasificacion">
                 <h4 class="pokemon-subtitle">Classificación</h4>
                 <div class="classi"  >
-                    undefinded
+                    no disponible
                 </div>
             </div>
             <div class="abilities">
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="foot">
-            <h5 class="pokemon-subtitle">DETALLES</h5>
+            <h5 class="pokemon-subtitle">DETALLES </h5>
             <div class="details">
                 <div>
                     <h4 class="pokemon-subtitle">Altura</h4>

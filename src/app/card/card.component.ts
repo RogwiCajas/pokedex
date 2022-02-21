@@ -9,9 +9,8 @@ import { PokemonService } from '../services/pokemon.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input() nombre = '';
-  pokemon: object = {};
-  imagen: string = '';
+  //@Input() nombre = '';
+  @Input() pokemon: object = {};
    
   constructor(
     private pokemonService: PokemonService
@@ -19,7 +18,7 @@ export class CardComponent implements OnInit {
     
   }
 
-  obtenerPokemon(name:string){
+  /*obtenerPokemon(name:string){
     this.pokemonService.getPokemon(name).subscribe(data => {
       console.log(data);
       this.pokemon = data;
@@ -30,23 +29,13 @@ export class CardComponent implements OnInit {
     }
     
     )
-  }
+  }*/
 
   ngOnInit(): void {
-    this.obtenerPokemon(this.nombre);
+    //this.obtenerPokemon(this.nombre);
+    console.log(this.pokemon );
   }
 
 }
-/*if(this.nombre!= ' '){
-        let url: string = 'https://pokeapi.co/api/v2/pokemon/' + this.nombre;
-       fetch(url)
-      .then(resp => resp.json() )
-      .then(obj => { 
-        this.pokemon = obj ;
-        this.imagen = obj.sprites.other.home.front_default;
-        console.log(this.pokemon);
-      })
-      .catch(err => console.log(err))
-    }
-    */
+
     

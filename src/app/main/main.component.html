@@ -12,8 +12,8 @@
                 <div class="form-group">
                     <label>Ingresar nombre del pokemon:</label>
                     <div class="flex">
-                        <input  class="form-control" type="text" placeholder="Ex. pikachu" #entrada >
-                        <button class="btn btn-primary" (click)="getName(entrada.value)" >Buscar</button>
+                        <input  class="form-control" type="text" placeholder="Ex. nidoqueen" #entrada >
+                        <button class="btn btn-primary" (click)="getPokemon(entrada.value)" >Buscar</button>
                     </div>
                     </div>
             
@@ -22,7 +22,7 @@
     <p style="font-weight: 200; text-align: center;">Querido entrenador usted a seleccionado información de <em>{{name}}</em></p>
     <!--render si el name es diferente de '' <div *ngIf="name!=' '&& name !=undefined">-->
     <div class="head" style="display: flex; justify-content:center">
-        <card [nombre]="name"></card>
+        <card [pokemon]="pokemon"></card>
     </div>
         
     
