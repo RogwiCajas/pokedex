@@ -1,0 +1,50 @@
+<div class="card-p" *ngIf="nombre!= ' ' && nombre!=undefined ">
+    <div class="avatar">
+    </div>
+    <div class="container">
+        <img class= "image" src = {{imagen}}/>
+        <h4 class="title-pokemon">#{{pokemon.id}}  {{nombre}}</h4>
+        <div class="types-section">
+            <div class="type" *ngFor="let type of pokemon.types; let i = index">
+                {{type.type.name}}   
+            </div>
+        </div>
+        <div class="description">
+            <div class="clasificacion">
+                <h4 class="pokemon-subtitle">Classificación</h4>
+                <div class="classi"  >
+                    undefinded
+                </div>
+            </div>
+            <div class="abilities">
+                <h4 class="pokemon-subtitle">Habilidades</h4>
+                <div class="ability" *ngFor="let ability of pokemon.abilities; let i = index">
+                    {{ability.ability.name}}
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <h5 class="pokemon-subtitle">DETALLES</h5>
+            <div class="details">
+                <div>
+                    <h4 class="pokemon-subtitle">Altura</h4>
+                    <div class="classi"  >
+                        {{pokemon.height}} ft
+                    </div>
+                </div>
+                <div>
+                    <h4 class="pokemon-subtitle">Peso</h4>
+                    <div class="classi"  >
+                        {{pokemon.weight}} lb
+                    </div>
+                </div>
+                <div>
+                    <h4 class="pokemon-subtitle">Genero</h4>
+                    <div class="classi"  >
+                        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/20/20451.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

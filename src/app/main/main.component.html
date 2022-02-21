@@ -1,0 +1,31 @@
+<div class="primario">
+    <div class="flex head">
+        <h1>POKEDÉX</h1>
+        <img class= "logo" src="https://cdn-icons-png.flaticon.com/512/188/188918.png">
+    </div>
+    <div class="flex">
+        <p style="font-weight: 200; text-align: center;">Bienvenido a la Pokedéx, aqui podras buscar información sobre los pokemones!!</p>
+    </div>
+    <div class="head">
+        <div class="center top">
+            
+                <div class="form-group">
+                    <label>Ingresar nombre del pokemon:</label>
+                    <div class="flex">
+                        <input  class="form-control" type="text" placeholder="Ex. pikachu" #entrada >
+                        <button class="btn btn-primary" (click)="getName(entrada.value)" >Buscar</button>
+                    </div>
+                    </div>
+            
+        </div> 
+    </div>
+    <p style="font-weight: 200; text-align: center;">Querido entrenador usted a seleccionado información de <em>{{name}}</em></p>
+    <!--render si el name es diferente de '' <div *ngIf="name!=' '&& name !=undefined">-->
+    <div class="head" style="display: flex; justify-content:center">
+        <card [nombre]="name"></card>
+    </div>
+        
+    
+    
+</div>
+
