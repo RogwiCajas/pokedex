@@ -2,10 +2,10 @@
     <div class="avatar">
     </div>
     <div class="container">
-        <img class= "image" src = {{pokemon.sprites.other.home.front_default}}/>
+        <img class= "image" src = {{pokemon!.sprites.other.home.front_default}}/>
         <h4 class="title-pokemon">#{{pokemon.id}}  {{pokemon.name}}</h4>
         <div class="types-section">
-            <div class="type" *ngFor="let type of pokemon.types; let i = index">
+            <div class="type" *ngFor="let type of pokemon!.types; let i = index">
                 {{type.type.name}}   
             </div>
         </div>
@@ -18,8 +18,8 @@
             </div>
             <div class="abilities">
                 <h4 class="pokemon-subtitle">Habilidades</h4>
-                <div class="ability" *ngFor="let ability of pokemon.abilities; let i = index">
-                    {{ability.ability.name}}
+                <div class="ability" *ngFor="let ability of pokemon!.abilities; let i = index">
+                    {{ability!.ability.name}}
                 </div>
             </div>
         </div>
@@ -29,13 +29,13 @@
                 <div>
                     <h4 class="pokemon-subtitle">Altura</h4>
                     <div class="classi"  >
-                        {{pokemon.height}} ft
+                        {{pokemon!.height}} ft
                     </div>
                 </div>
                 <div>
                     <h4 class="pokemon-subtitle">Peso</h4>
                     <div class="classi"  >
-                        {{pokemon.weight}} lb
+                        {{pokemon!.weight}} lb
                     </div>
                 </div>
                 <div>
